@@ -31,3 +31,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // Perform an initial check in case the element is already visible
     checkIfInView();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var infoButton = document.querySelector(".info-button");
+    var disclaimerText = document.querySelector(".disclaimer-text");
+    var videoDescription = document.querySelector(".video-description");
+
+    infoButton.addEventListener("click", function () {
+        disclaimerText.classList.toggle("visible");
+
+        // Adjust parent container height dynamically
+        if (disclaimerText.classList.contains("visible")) {
+            videoDescription.style.height = "auto";
+        } else {
+            videoDescription.style.height = ""; // Reset to default
+        }
+    });
+});
