@@ -175,15 +175,18 @@ iframe {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    text-align: center;
+	text-align: center;
     cursor: pointer;
     margin-top: 10px;
     transition: all 0.3s ease-in-out;
 	top: 50%;
-	line-height: 1;
-	display: flex;
-    align-items: center;
-    justify-content: center;
+	line-height: 20px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transform: scale(1);
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .info-button:hover {
@@ -262,6 +265,9 @@ iframe {
 	}
 	.info-button-container{
 		align-items: center;
+	}
+	.info-button{
+		font-size: 12px;
 	}
 }
 
