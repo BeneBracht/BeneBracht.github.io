@@ -114,9 +114,9 @@ iframe {
 .video-description {
     position: absolute; /* Position relative to .video-container */
     background-color: #443627; 
-	margin-bottom: 40%;
+	margin-bottom: 38%;
 	margin-right: 20%;
-    padding: 20px 30px 30px; /* Padding for content spacing */
+    padding: 20px 20px 20px 30px; /* Padding for content spacing */
     border-radius: 5px;
     box-sizing: border-box; /* Ensures padding is included in total width */
     text-align: left;
@@ -124,13 +124,24 @@ iframe {
 	box-shadow: 5px 0px 10px 5px rgba(0,0,0,0.4);
 		 /* Initial transform state - positioned out of view */
    	transform: translateY(100%);
-    transition: transform 0.5s ease-in-out}
+    transition: transform 0.5s ease-in-out;
+		 display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	height: auto;
+	min-height: 100px;
+}
 
 /* Slide in when visible */
 .video-description.visible {
     transform: translateX(0); /* Slides into place */
 }
 		
+.video-description p {
+    overflow-wrap: break-word; /* Ensures long words break properly */
+    word-wrap: break-word;
+    white-space: normal; /* Ensures text wraps properly */
+}
 
 .descriptionTitle {
  	color: #FFFFFF;
@@ -148,6 +159,7 @@ iframe {
     font-style: italic;
     margin: 0;
 }
+
 .info-button-container{
 	display: flex;
 	height: auto;
@@ -168,6 +180,10 @@ iframe {
     margin-top: 10px;
     transition: all 0.3s ease-in-out;
 	top: 50%;
+	line-height: 1;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .info-button:hover {
@@ -191,7 +207,6 @@ iframe {
     max-height: fit-content; /* Allows it to expand */
     padding: 10px 0 0 0; /* Adds space when shown */
 }
-
 
 
 @media only screen and (max-width: 768px) {
@@ -237,12 +252,13 @@ iframe {
 		margin-right: 0;
 		text-align: center;
 		margin-bottom: 70%;
+		
 	}
 	.video-container{
 		padding: 10% 0 10% 0;
 	}
 	.arrow{
-max-width: 20px;
+		max-width: 20px;
 	}
 	.info-button-container{
 		align-items: center;
