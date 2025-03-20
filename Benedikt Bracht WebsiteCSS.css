@@ -236,6 +236,8 @@ iframe {
 @media only screen and (max-width: 480px) {
     .descriptionTitle {
         font-size: 24px;
+    	text-align: center;
+    	width: 100%;
     }
 	.descriptionText{
 		font-size: 14px;
